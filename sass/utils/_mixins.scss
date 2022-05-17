@@ -1,0 +1,145 @@
+@import "./variables";
+
+@mixin d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin button {
+    background: linear-gradient(355deg, $primary-color 0%, $secondary-color 80%);
+    border: none;
+    border-radius: 2em;
+    padding: 1em;
+}
+@mixin function{
+    background-color: $secondary-background-color;
+    
+    padding-top: 4%;
+    padding-bottom: 4%;
+    box-shadow: 0 10px 10px 0 #D3D3D3;
+    width:70%;
+ 
+    
+
+    border-radius: 18px;
+}
+@mixin h3{
+    margin-left: 30px;
+    font-size: 25px;
+}
+@mixin block-restaurant
+{ width:50%;
+    background-color: $primary-background-color;
+    height: 300px;
+    
+    margin-top: 25px;
+    box-shadow: 0 10px 10px 0 #D3D3D3;
+    
+    border-radius: 15px;
+}
+@mixin img-restaurant
+{
+    width:100%;
+    background-position: center;
+    background-size: cover;
+    border-radius:15px 15px 0 0;
+    height: 70%;
+}
+@mixin zoom
+{
+    transform: scale(1.02);
+}
+//animation de coeur
+@mixin heart
+{
+    color: transparent;
+                background-image: linear-gradient(355deg, $primary-color 0%, $secondary-color 80%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                transition: all 200ms ease-in-out;
+}
+
+@mixin quarterspin
+{
+    @keyframes quarterspin 
+    {
+        0%
+        {
+            transform: rotate(-270deg);
+        }
+        100%
+        {
+            transform: rotate(0);
+        }
+    }
+}
+//animation des items
+@keyframes appear
+{
+    0%
+    {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes disappear
+{
+ to 
+ {
+   transform:scale(0);
+ }
+}
+@keyframes spin 
+{
+  to 
+  {
+    transform:rotate(360deg);
+  }
+}
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints,desktop)) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints,tablet-min)) and (max-width: map-get($breakpoints,tablet-max)) {
+        @content;
+    }
+    }
+
+
+ @mixin  load
+ {
+    
+      $animation-duration:1s;
+      $animation-count:4;
+      position:fixed;
+      display:grid;
+      place-items: center;
+      background-color: white;
+      height:100vh;
+      inset: 0;
+      z-index: 1;
+      opacity: 0.9;
+      animation: disappear 200ms $animation-duration * $animation-count forwards ;
+      transform-origin: top;
+    
+ }   
+ @mixin after-load
+ {
+    content: "";
+    height:100px;
+    width:100px;
+    border-right:5px solid transparent ;
+    border-top: 5px solid $primary-color;
+    border-radius: 50%;
+    animation: spin $animation-duration ease-in-out;
+    animation-iteration-count: $animation-count;
+ }

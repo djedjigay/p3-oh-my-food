@@ -1,0 +1,140 @@
+// @import "../sass/utils/mixins";
+
+.restaurants {
+    font-family: 'Roboto', sans-serif;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    h2 {
+        margin-left: 20px;
+        margin-bottom: 2rem;
+    }
+
+    h3 {
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    background-color:$tertiary-background-color;
+
+    .menu__cards {
+
+        margin-left: 20px;
+        margin-right: 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 2rem;
+
+        
+
+
+        @media screen and (min-width: 1224px) {
+            justify-content: center;
+            flex-direction: unset;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1223px) {
+            justify-content: center;
+            flex-direction: unset;
+            flex-wrap: wrap;
+        }
+
+        .new {
+
+            position: relative;
+        }
+
+        .new::before {
+            content: "Nouveau";
+            position: absolute;
+            height: 2rem;
+            width: 5rem;
+            background-color: $tertiary-color;
+            color: darken($tertiary-color, 50%);
+            display: grid;
+            place-items: center;
+            right: 1rem;
+            top: 1rem;
+        }
+    }
+
+    .card {
+        box-shadow: 0 10px 10px 0 #D3D3D3;
+        margin-bottom: 2rem;
+        height: 250px;
+        background-color: white;
+        border-radius: 20px;
+
+        @media screen and (min-width: 1224px) {
+            width: 50%;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1223px) {
+            width: 45%;
+        }
+
+        &__image {
+
+            height: 67%;
+            width: 100%;
+            background-size: cover;
+            border-radius: 20px 20px 0 0;
+
+        }
+
+        @for $i from 1 through 4 {
+            &__image-#{$i} {
+                background-image: url(../../p3/images/menus/menu-#{$i}.jpg);
+            }
+        }
+
+        &__description {
+            position: relative;
+
+            h3 {
+                margin-top: 1rem;
+                margin-left: 1rem;
+
+            }
+
+            p {
+                margin-top: 0.8rem;
+                margin-left: 1rem;
+            }
+
+            i {
+                font-size: 1.5rem;
+                position: absolute;
+                right: 1rem;
+                top: 50%;
+
+                transform: translateY(-50%);
+            }
+
+            .fas {
+                color: transparent;
+                background-image: linear-gradient(355deg, $primary-color 0%, $secondary-color 80%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                transition: all 200ms ease-in-out;
+            }
+
+            &:hover .fas {
+                opacity: 1;
+                transform: translateY(-50%) scale(1.2);
+            }
+        }
+
+        &:hover {
+            @include zoom;
+        }
+    }
+}

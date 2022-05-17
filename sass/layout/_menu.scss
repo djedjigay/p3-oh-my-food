@@ -1,0 +1,113 @@
+// @use "../sass/utils/variables";
+// @import "../sass/utils/zoom";
+// @import "../sass/utils/variables";
+$tuto-height:1rem;
+.loader
+{
+  $animation-duration:1s;
+  $animation-count:3;
+  position:fixed;
+  display:grid;
+  place-items: center;
+  background-color: white;
+  height:100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: disappear 200ms $animation-duration * $animation-count forwards ;
+  transform-origin: top;
+  &::after
+  {
+    content: "";
+    height:100px;
+    width:100px;
+    border-right:5px solid transparent ;
+    border-top: 5px solid $primary-color;
+    border-radius: 50%;
+    animation: spin $animation-duration ease-in-out;
+    animation-iteration-count: $animation-count;
+  }
+}
+@keyframes disappear
+{
+ to 
+ {
+   transform:scale(0);
+
+ }
+}
+@keyframes spin 
+{
+  to 
+  {
+    transform:rotate(360deg);
+  }
+}
+.menu {
+  font-family: 'Raleway', sans-serif;
+  margin-left: 10px;
+  counter-reset: steps;
+
+  & ol {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    @media (max-width:870px) {
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    & li {
+      margin-left: -20px;
+      position: relative;
+
+      &::before {
+        content: counter(steps);
+        counter-increment: steps;
+        color: white;
+        background-color: $primary-color;
+        width: 1.7 * $tuto-height;
+        height: 1.7 * $tuto-height;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        position: absolute;
+        bottom: $tuto-height;
+        left: -1 * $tuto-height;
+        margin-right: 20px;
+
+      }
+
+      list-style-type: none;
+      margin-top: 20px;
+      padding: 1.5rem 2rem;
+      flex-grow:1;
+      background-color: $secondary-background-color;
+      border-radius: 1rem;
+
+      box-shadow: 0 10px 10px 0 #D3D3D3;
+
+      &:hover {
+        @include zoom;
+        background-color: lighten($primary-color, 35%);
+        & i {
+          font-size: 20px;
+          color: $primary-color;
+          margin-right: 20px;
+        }
+      }
+
+      & i {
+
+        font-size: 20px;
+        margin-right: 1rem;
+        color: $icon-color;
+
+      }
+    }
+  }
+
+
+}

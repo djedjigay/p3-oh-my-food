@@ -1,0 +1,16 @@
+{
+  "name": "p3",
+  "version": "1.0.0",
+  "description": "p3 projet openclassroom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/style.scss:./css/style.css --style compressed"
+  },
+  "author": "jiji",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.51.0"
+  }
+}
