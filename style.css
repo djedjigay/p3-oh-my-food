@@ -50,6 +50,7 @@
                                                 .restaurants .card__image{
                                                     height:67%;width:100%;background-size:cover;
                                                     border-radius:20px 20px 0 0}.restaurants .card__image-1
+<<<<<<< HEAD
                                                     {background-image:'url(../images/menus/menu-1.jpg)'}
                                                     .restaurants .card__image-2{
                                                         background-image:url(../images/menus/menu-2.jpg)}
@@ -57,6 +58,15 @@
                                                             background-image:url(../images/menus/menu-3.jpg)}
                                                             .restaurants .card__image-4{
                                                                 background-image:url(../images/menus/menu-4.jpg)}
+=======
+                                                    {background-image:url(../../images/menus/menu-1.jpg)}
+                                                    .restaurants .card__image-2{
+                                                        background-image:url(../../images/menus/menu-2.jpg)}
+                                                        .restaurants .card__image-3{
+                                                            background-image:url(../../images/menus/menu-3.jpg)}
+                                                            .restaurants .card__image-4{
+                                                                background-image:url(../../images/menus/menu-4.jpg)}
+>>>>>>> 4119b9d0d2e39fd458911e33d67dab28cd9aeb82
                                                                 .restaurants .card__description{position:relative}
                                                                 .restaurants .card__description h3{margin-top:1rem;margin-left:1rem}.restaurants .card__description p{margin-top:.8rem;margin-left:1rem}.restaurants .card__description i{font-size:1.5rem;position:absolute;right:1rem;top:50%;transform:translateY(-50%)}.restaurants .card__description .fas{color:rgba(0,0,0,0);background-image:linear-gradient(355deg, #9356DC 0%, #FF79DA 80%);background-clip:text;-webkit-background-clip:text;opacity:0;transition:all 200ms ease-in-out}.restaurants .card__description:hover .fas{opacity:1;transform:translateY(-50%) scale(1.2)}.restaurants .card:hover{transform:scale(1.02)}.main__container{margin:0px}.loader{position:fixed;display:grid;place-items:center;background-color:#fff;height:100vh;inset:0;z-index:1;opacity:.9;animation:disappear 200ms 3s forwards;transform-origin:top}.loader::after{content:"";height:100px;width:100px;border-right:5px solid rgba(0,0,0,0);border-top:5px solid #9356dc;border-radius:50%;animation:spin 1s ease-in-out;animation-iteration-count:3}@keyframes disappear{to{transform:scale(0)}}@keyframes spin{to{transform:rotate(360deg)}}.menu{font-family:"Raleway",sans-serif;margin-left:10px;counter-reset:steps}.menu ol{display:flex;flex-wrap:wrap;gap:3rem}@media(max-width: 870px){.menu ol{flex-direction:column;gap:.2rem}}.menu ol li{margin-left:-20px;position:relative;list-style-type:none;margin-top:20px;padding:1.5rem 2rem;flex-grow:1;background-color:#eaeaea;border-radius:1rem;box-shadow:0 10px 10px 0 #d3d3d3}.menu ol li::before{content:counter(steps);counter-increment:steps;color:#fff;background-color:#9356dc;width:1.7rem;height:1.7rem;display:grid;place-items:center;border-radius:50%;position:absolute;bottom:1rem;left:-1rem;margin-right:20px}.menu ol li:hover{transform:scale(1.02);background-color:#f2eafb}.menu ol li:hover i{font-size:20px;color:#9356dc;margin-right:20px}.menu ol li i{font-size:20px;margin-right:1rem;color:#7d7d7d}footer{background-color:#353535;padding:1rem 2rem}footer h2{font-family:"Shrikhand","sans";padding:1rem 0;color:#fff}footer p{padding:.2rem;color:#fff}footer p i{color:#fff}footer a{text-decoration:none;color:#fff}.header-restau{display:flex;float:left;margin-left:20px;margin-top:25px}.bt{display:flex;justify-content:center;align-items:center}a{text-decoration:none}.intro__button{width:150px;background:linear-gradient(355deg, #9356DC 0%, #FF79DA 80%);border:none;border-radius:2em;padding:1em;text-align:center}.header{position:relative}.header__log{padding:1.25em 0 1.25em 0;width:200px;margin-left:98px;
                     display:flex;
