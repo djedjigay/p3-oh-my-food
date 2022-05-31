@@ -91,7 +91,7 @@
 
         @for $i from 1 through 4 {
             &__image-#{$i} {
-                background-image: url(../../p3/images/menus/menu-#{$i}.jpg);
+                background-image: url('../images/menus/menu-#{$i}.jpg');
             }
         }
 
