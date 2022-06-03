@@ -9,6 +9,13 @@
 
 }
 
+.banner img {
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+    object-position: center bottom;
+}
+
 .bt {
     @include d-flex-center;
 }
@@ -20,6 +27,7 @@ a {
 .intro__button {
     width: 150px;
     @include button;
+    &:hover {@include button_survol; }
 
     text-align: center;
 }
@@ -111,16 +119,6 @@ main {
 
         padding: 2rem 1rem;
     }
-
-    
-
-
-.banner img {
-    width: 100%;
-    height: 35vh;
-    object-fit: cover;
-    object-position: center bottom;
-}
 
 .menus {
     flex-direction: column;

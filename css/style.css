@@ -478,6 +478,13 @@ footer a {
   margin-top: 25px;
 }
 
+.banner img {
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
 .bt {
   display: flex;
   justify-content: center;
@@ -495,6 +502,14 @@ a {
   border-radius: 2em;
   padding: 1em;
   text-align: center;
+}
+.intro__button:hover {
+  /*background: linear-gradient(355deg, $primary-color 0%, $secondary-color 80%);
+  border: none;
+  border-radius: 2em;
+  padding: 1em;
+  opacity: 0.9;*/
+  background: #c9abee;
 }
 
 .header {
@@ -568,12 +583,6 @@ main h2 {
   font-family: "Shrikhand";
   font-size: 30px;
   padding: 2rem 1rem;
-}
-main .banner img {
-  width: 100%;
-  height: 35vh;
-  object-fit: cover;
-  object-position: center bottom;
 }
 main .menus {
   flex-direction: column;
