@@ -10,6 +10,16 @@
     border: none;
     border-radius: 2em;
     padding: 1em;
+
+}
+@mixin button_survol 
+{
+    background: linear-gradient(355deg, $primary-color 0%, $secondary-color 80%);
+   border: none;
+    border-radius: 2em;
+    padding: 1em;
+    opacity: 0.9;
+  
 }
 @mixin function{
     background-color: $secondary-background-color;

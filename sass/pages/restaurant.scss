@@ -112,14 +112,7 @@ main {
         padding: 2rem 1rem;
     }
 
-    & .intro__button {
-
-        @include button;
-        margin-top: 70px;
-
-        margin-bottom: 80px;
-    }
-}
+    
 
 
 .banner img {
@@ -242,4 +235,22 @@ main {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+}
+.intro__button {
+
+    background: linear-gradient(355deg, $primary-color 0%, $secondary-color 80%);
+    border: none;
+    border-radius: 2em;
+    padding: 1em;
+    margin-top: 70px;
+    box-shadow: 0 5px 5px 0 #D3D3D3;
+    margin-bottom: 80px;
+}
+.intro__button:hover
+{
+   opacity: 0.9;
+   transform: scale(01.05);
+   box-shadow: 0 10px 10px 0 #D3D3D3;
+    
 }
